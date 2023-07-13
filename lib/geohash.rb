@@ -18,7 +18,7 @@ class GeoHash
   NEIGHBOR_DIRECTIONS = [ [0, 1], [2, 3] ]
   
   # Encode latitude and longitude to a geohash with precision digits
-  def self.encode(lat, lon, precision=10)
+  def self.encode(lat, lon, precision=12)
     encode_base(lat.to_f, lon.to_f, precision)
   end
 
