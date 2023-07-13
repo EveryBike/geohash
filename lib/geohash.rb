@@ -19,11 +19,18 @@ class GeoHash
   
   # Encode latitude and longitude to a geohash with precision digits
   def self.encode(lat, lon, precision=10)
-    encode_base(lat, lon, precision)
+    encode_base(lat.to_f, lon.to_f, precision)
   end
 
-  # Decode a geohash to a latitude and longitude with decimals digits
-  def self.decode(geohash, decimals=5)
+  def self.decode(geohash)
+    decode_bbox(geohash)
+  end
+
+  def self.neighbors(geohash)
+    new(geohash).neighbors
+  end
+
+  def self.center(geohash, decimals=5)
     lat, lon = decode_base(geohash)
     [lat.decimals(decimals), lon.decimals(decimals)]
   end

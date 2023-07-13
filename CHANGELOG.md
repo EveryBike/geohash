@@ -1,5 +1,8 @@
 # C_Geohash Changelog
 
+## 1.1.3
+* change interface like pr_geohash for compatibility
+
 ## 1.1.2
 
 * renamed to c_geohash and published on Rubygems.org (@drewda)

@@ -2,3 +2,5 @@
 *.o
 tmp/
 ext/Makefile
+.idea
+lib/geohash_native.so

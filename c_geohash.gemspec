@@ -2,8 +2,8 @@ jruby = !!()
 
 Gem::Specification.new do |s|
   s.name     = "c_geohash"
-  s.version  = '1.1.2'
-  s.date     = "2014-11-12"
+  s.version  = '1.1.3'
+  s.date     = "2023-07-13"
   s.summary  = "Geohash library that wraps native C in Ruby"
   s.email    = ["dave@popvox.com", "drew@mapzen.com"]
   s.homepage = "https://github.com/mapzen/geohash"

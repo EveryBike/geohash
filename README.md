@@ -38,20 +38,30 @@ GeoHash is very easy to use (and fast) because it's written in C with Ruby bindi
   ````ruby
   require 'geohash'
 
-  GeoHash.decode('f77')
-  => [63.98438, -73.82813]
+GeoHash.encode(47.6062095, -122.3320708)
+# => "c23nb62w20st"
 
-  GeoHash.encode(39.51, -76.24)
-  => "dr1bc0edrj"
+GeoHash.encode(47.6062095, -122.3320708, 6)
+# => "c23nb6"
 
-  # Decode a geohash to a bounding box
-  decode_bbox('dqcw4')
-  => [39.0234375, -76.552734375], [39.0673828125, -76.5087890625]]
+#########
+# Decode from geohash
+
+GeoHash.decode("c23nb6")
+# => [[47.603759765625, -122.332763671875], [47.6092529296875, -122.32177734375]]
+
+#########
+# Calculate adjacent geohash
+
+GeoHash.neighbors("xn774c")
+# => ["xn774f", "xn7754", "xn7751", "xn7750", "xn774b", "xn7748", "xn7749", "xn774d"]
+
   ````
 
 You can encode or decode to an arbitrary level of precision:
 * Encode latitude and longitude to a geohash with precision digits: `encode(lat, lon, precision=10)`
-* Decode a geohash to a latitude and longitude with decimals digits: `decode(geohash, decimals=5)`
+* Decode a geohash to bbox: `decode(geohash)`
+* Get center from geohash to a latitude and longitude with decimals digits: `center(geohash, decimals=5)`
 
 ## To Develop
 
