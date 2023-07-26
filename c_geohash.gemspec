@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.email    = ["dave@popvox.com", "drew@mapzen.com"]
   s.homepage = "https://github.com/mapzen/geohash"
   s.description = "C_Geohash provides support for manipulating Geohash strings in Ruby. See http://en.wikipedia.org/wiki/Geohash. This is an actively maintained fork of the original http://rubygems.org/gems/geohash"
-  s.has_rdoc = true
   s.licenses = ['MIT']
   s.authors  = ["David Troy", "Drew Dara-Abrams"]
   if ENV['JRUBY'] || RUBY_PLATFORM =~ /java/
